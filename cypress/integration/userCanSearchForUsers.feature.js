@@ -1,7 +1,7 @@
 describe('User can search for users on github', () => {
   describe('Successfully search', () => {
     beforeEach(() => {
-      cy.intercept('GET', 'https://api.github.com/users', {
+      cy.intercept('GET', 'https://api.github.com/users**', {
         fixture: 'people.json',
       });
       cy.visit('/');
